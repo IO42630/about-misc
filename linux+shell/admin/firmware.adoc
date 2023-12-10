@@ -1,0 +1,6 @@
+= firmware
+
+* google & download some zip
+* extract into `/lib/firmware`
+* install (if any) the firmware loader
+** might be located in `contrib`, `non-free`

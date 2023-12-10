@@ -1,0 +1,24 @@
+version: '3' # version of docker
+services:
+  mongodb:
+    image: mongo
+    ports:
+      - "27017:27017"
+    environment: # see docs for var names: https://hub.docker.com/_/mongo/
+      - MONGO_INITDB_ROOT_USERNAME=admin # usually better to define env vars in compose, not in dockerfile
+      - MONGO_INITDB_ROOT_PASSWORD=password
+    volumes:
+      - mongo-data:/data/db
+      # - mysql:var/lib/mysql
+      # - postgres:var/lib/postgresql/data
+  mongo-express:
+    image: mongo-express
+    ports:
+      - "8080:8081"
+    environment:
+      - ME_CONFIG_MONGODB_ADMINUSERNAME=admin
+      - ME_CONFIG_MONGODB_ADMINPASSWORD=password
+      - ME_CONFIG_MONGODB_SERVER=mongodb
+volumes:
+  mongo-data:
+    driver: local

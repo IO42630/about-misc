@@ -1,0 +1,5 @@
+= XML
+
+|===
+| `xmlns` | XML namespace
+|===

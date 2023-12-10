@@ -1,0 +1,41 @@
+== TASKS
+The idea here is to have a list of useful tasks, and the commands needed to perform them.
+
+{empty} +
+{empty} +
+
+=== UPDATE LOCAL BRANCH FROM REMOTE
+* switch to local branch : git checkout <local>
+* update from remote : git pull <origin> <remote>
+
+{empty} +
+
+=== CREATE NEW LOCAL BRANCH FROM REMOTE
+git checkout -b <my_new_branch> <remote>/<branch_name>
+
+{empty} +
+
+=== PUT INTO STASH
+* git add --all
+* git stash
+
+{empty} +
+
+=== FETCH FROM STASH
+
+|===
+| `git stash list` |
+| `git stash apply --index 0` | apply stash with given index.
+|===
+
+{empty} +
+
+=== SQUASH LAST X COMMITS
+* git reset --soft HEAD~3
+* git commit
+
+=== FETCH NEW COMMITS FROM REMOTE
+* pull origin <branch>  (just feels safer)
+* checkout <branch-to-be-updated>
+* git merge <branch>
+

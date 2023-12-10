@@ -1,0 +1,13 @@
+= HotSwap
+:stylesheet: ../../shared/adoc-styles.css
+:toc:
+:toclevels:4
+
+
+== How to HowSwap
+
+1. hit a breakpoint
+2. change the code
+3. build/recompile
+4. drop frame
+5. continue (repeat) execution

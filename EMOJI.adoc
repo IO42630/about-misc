@@ -1,0 +1,11 @@
+= EMOJI
+:stylesheet: ../shared/adoc-styles.css
+
+* ✅ done
+* 🚧 wip
+* ⏳ on hold
+* 🦋 WildFly
+* 🐋 Docker
+* 💥 broken
+* ☕ Java
+* ⛵ JavaEE / Jakarta

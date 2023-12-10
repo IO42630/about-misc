@@ -1,0 +1,10 @@
+Science is what we understand well enough to explain to a computer.
+Art is everything else we do.
+During the past several years an important part of mathematics has been transformed from an Art to a Science:
+No longer do we need to get a brilliant insight in order to evaluate sums of binomial coefficients,
+and many similar formulas that arise frequently in practice;
+we can now follow a mechanical procedure and discover the answers quite systematically.
+I fell in love with these procedures as soon as I learned them, because they worked for me immediately.
+Not only did they dispose of sums that I had wrestled with long and hard in the past,
+they also knocked off two new problems that I was working onat the time I first tried them.
+The success rate was astonishing.
