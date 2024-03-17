@@ -1,0 +1,14 @@
+Make a .desktop file.
+
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=IDEA
+Exec=/home/user/home/app/idea/bin/idea.sh
+Icon=/home/user/home/app/idea/bin/idea.svg
+Categories=Development
+
+
+Place it in:
+/usr/share/applications  (affects all users)
+[your-home]/.local/share/applications (affects chosen user)

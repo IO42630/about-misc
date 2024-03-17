@@ -1,0 +1,5 @@
+= GitLab
+
+* this covers only the theory
+* for the practial lab, goto _services_ repo
+

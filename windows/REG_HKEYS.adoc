@@ -1,0 +1,6 @@
+= Registry HKEYs
+
+[cols="1,3"]
+|===
+| SIDEBAR ICONS | `HKEY_CURRENT_USER\SOFTWARE\Classes\WOW6432Node\CLSID`
+|===

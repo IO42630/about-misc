@@ -1,0 +1,33 @@
+= Systems
+:toc:
+:toclevels: 5
+
+=== Context
+* `this -> hosts -> config notes`
+
+
+{empty} +
+
+=== List of Hosts
+
+==== Purpose
+
+* `unaxus` -> affordable, low-code, always-on hosting.
+* `hidora` -> on demand hosting for vps & docker
+* `define` -> desktop
+* `boxy` -> laptop
+* `xps` -> work laptop
+* `cx45` ->mobile
+
+==== Hardware
+
+[cols="3,2,2,2"]
+|===
+| hosts | cpu | ram | drive (fast/slow)
+| unaxus  | ?? | 2 | 500
+| hidora | *51.2* | 16 | 100
+| define   | 4x3.5-3.9 | *64* | 500/*9000*
+| boxy | 6x2.6-4.5 | 64 | 2000
+| xps  | |32 | 2000
+| cx45 | ?? | ?? | 256
+|===

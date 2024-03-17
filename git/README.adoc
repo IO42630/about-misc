@@ -1,0 +1,156 @@
+= Git
+
+{empty} +
+
+== Areas
+* 1-3 are local.
+* 1-4 may be called trees.
+
+
+
+[cols="1,4,12"]
+|===
+| 1 | Working Directory | > "physical" directory in which repo was initialized. +
+- > contains files, +
+- > some of which are already *indexed* by git, +
+- > while others are not.
+| 2 | Staging Area | > collection of all files that are indexed by git. +
+> `add <file>` adds a file to index.
+| 3 | Local Repository | > `commit` adds changes in indexed files to the local repo. +
+> 1..n files can be committed in a single commit. +
+> `HEAD` points to last commit. +
+- > i.e. commiting a change, moves the head to said change.
+| 4 | Remote Repository | > is created with `git init --bare` +
+> this makes it impossible to commit +
+> only `push` is allowed.
+| 5 | Live Version |
+|===
+
+{empty} +
+
+==== Transitions
+
+|===
+| `1 -> 2` | `add <file>`
+| `2 -> 3` | `commit`
+| `3 -> 4` | `push <origin> <branch>`
+| `3 <- 4` | `fetch`
+| `1 <- 3` | `merge`
+| `1 <- 4` | `pull`
+|===
+
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+
+== Std Commands and their Workflows
+
+{empty} +
+
+=== init / clone
+[cols="2,10"]
+|===
+| `git clone` | `git init` +
+`git remote add origin URL` +
+`git fetch --all` +
+`git pull origin master` +
+(additionally `clone` will setup additional  remote tracking branches)
+|===
+
+* git clone https://github.com/IO42630/idea-settings.git
+
+
+
+{empty} +
+
+=== add / commit
+
+===== Workflow
+[cols="1,3"]
+|===
+| `touch foo.txt` | create a file
+| `git add foo.txt` | stage file
+| `git commit foo.txt -m "foo was added"` | commit file with msg "foo was added" +
+> will return error, if prior `add` was omitted
+
+|===
+
+{empty} +
+
+=== branch
+
+A branch is 'just' a pointer to a commit.
+I.e. creating a branch does not modify the repo in any other way.
+
+[cols="1,3"]
+|===
+| `git branch` | list local branches located in `.git/refs/heads`
+| `git branch -r` | list remote branches located in `.git/refs/remotes`
+| `git branch -a` | list all branches in local and remote repo
+| `git branch <feature>` | create new branch called <feature>.
+| `git branch -d <feature>` | safe delete branch (only if no unmerged changes present)
+| `git branch -D <feature>` | force delete
+| `git branch -m <foo>` | rename current branch to <foo>
+| `git checkout <feature>` | switches to branch <feature>
+|===
+
+===== Workflow
+|===
+| git branch foo |
+| git checkout foo |
+|===
+
+{empty} +
+{empty} +
+
+=== fetch
+|===
+| `git remote add <feature> <path>` | Create alias for url or path.
+| origin | auto-generated alias for url where repo was cloned from
+| `git remote rename <old-name> <new-name` | remotes can be renamed
+| `git fetch` | downloads content from remote repo
+
+|===
+
+{empty} +
+{empty} +
+
+=== merge
+[cols="2,4,4"]
+|===
+| merging branch | branch being merged | here <repo-feature>/<feature>
+| receiving branch | branch receiving the merge | here <repo-local>/<master>
+|===
+
+===== Workflow
+The following cmd are performed from within the <repo-local> repo, thus the receiving branch.
+
+[options=header,cols="8,16"]
+|===
+| command  | effect
+| `git status` |  check if HEAD is pointing to <master>.
+| `git checkout <master>` | switch to <master> if HEAD was pointing elsewhere in `git status` .
+| `git fetch <repo-feature>` | fetch (store a copy) latest changes
+
+| `git merge <feature>/<branch>` | merge feature into <master>
+| `git pull <remote> <master>` | combines `fetch` + `merge`
+|===
+
+=== Git in IDEA
+* in log, only the remote branches without a local counterpart are shown.
+
+{empty} +
+{empty} +
+
+=== ignore
+Both `.gitignore` and `.git/info/exclude` invoke the same mechanism.
+[options=header,cols="8,16"]
+|===
+|   |
+| `.gitignore` |  meant to be shared among team members.
+| `.git/info/exclude` | meant for personal ignore patterns.
+|===

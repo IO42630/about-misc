@@ -1,0 +1,14 @@
+= Shell
+:stylesheet: ../../../shared/adoc-styles.css
+:toc:
+:toclevels: 4
+
+== Shortcuts
+
+|===
+| Shortcut | Description
+| `Ctrl + U` | Delete from cursor to beginning of line
+| `Ctrl + K` | Delete from cursor to end of line
+| `Ctrl + W` | Delete from cursor to beginning of word
+| `Alt + D` | Delete from cursor to end of word
+|===

@@ -1,0 +1,27 @@
+= Kubernetes
+
+image:img/components-of-kubernetes.svg[]
+
+* we tell kubernetes desired state
+** kub is responsible for making it happen
+** if running state diff to config state
+*** kub will do stuff
+
+* _cluster services_
+** has API
+
+* _worker_ : container host
+** has kublet process ->communitcates with cluster services
+
+
+
+* use case
+1. feed desired state (foo.yaml)
+
+
+
+* pod smallest unit of deployment
+** has running containers
+** can conf # of replicas
+
+

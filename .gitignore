@@ -1,1 +1,13 @@
-.idea
+**/.idea/
+*.iml
+
+**.env
+
+/services/nextcloud/cloud/copy/var/www/html/config/config.php
+*.key
+*.crt
+*.csr
+*.pem
+*.0
+password.txt
+/services/gitlab/fs/

@@ -1,0 +1,4 @@
+= linux shell
+
+`linux` + `shell` is one topic. +
+This is because most things in _linux_ are manipulated by _shell_.

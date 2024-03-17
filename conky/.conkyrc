@@ -1,0 +1,69 @@
+-- put into ~/.conkyrc
+
+conky.config = {
+    alignment = 'top_left',
+    background = false,
+    border_width = 0,
+    border_inner_margin = 20,
+    cpu_avg_samples = 2,
+    default_color = 'white',
+    default_outline_color = 'white',
+    default_shade_color = 'white',
+    double_buffer = true,
+    draw_borders = false,
+    draw_graph_borders = true,
+    draw_outline = false,
+    draw_shades = false,
+    extra_newline = false,
+    font = 'Consolas:size=12',
+    gap_x = 40,
+    gap_y = 40,
+    minimum_height = 5,
+    minimum_width = 5,
+    net_avg_samples = 2,
+    no_buffers = true,
+    out_to_console = false,
+    out_to_ncurses = false,
+    out_to_stderr = false,
+    out_to_x = true,
+    own_window = true,
+    own_window_class = 'Conky',
+    own_window_type = 'normal',
+    own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+    show_graph_range = false,
+    show_graph_scale = false,
+    stippled_borders = 0,
+    update_interval = 1.0,
+    uppercase = false,
+    use_spacer = 'none',
+    use_xft = true,
+}
+
+conky.text = [[
+${font Consolas:size=12}${alignc}${color grey}${time %Y.%m.%d}
+${font Consolas:size=60}${alignc}$color${time %R:%S}
+${font Consolas:size=12}
+
+cpu  $color${cpubar cpu0 12,80}${cpubar cpu1 12,80}${cpubar cpu2 12,80}${cpubar cpu3 12,80}${cpubar cpu4 12,80}${cpubar cpu5 12,80}
+     ${cpubar cpu6 12,80}${cpubar cpu7 12,80}${cpubar cpu8 12,80}${cpubar cpu9 12,80}${cpubar cpu10 12,80}${cpubar cpu11 12,80}
+     ${cpubar cpu12 12,80}${cpubar cpu13 12,80}${cpubar cpu14 12,80}${cpubar cpu15 12,80}${cpubar cpu16 12,80}${cpubar cpu17 12,80}
+     ${cpubar cpu18 12,80}${cpubar cpu19 12,80}${cpubar cpu20 12,80}${cpubar cpu21 12,80}${cpubar cpu22 12,80}${cpubar cpu23 12,80}
+mem  $color${membar 12,480}
+swap $color${swapbar 12,480}
+/    ${fs_bar 12,480 /}
+pool ${fs_bar 12,480 /media/pool}
+
+
+${color grey}                      CPU     MEM     IO
+${color lightgrey}${top name 1}    ${top cpu 1} ${top mem 1} ${top io_perc 1}
+${color lightgrey}${top name 2}    ${top cpu 2} ${top mem 2} ${top io_perc 2}
+${color lightgrey}${top name 3}    ${top cpu 3} ${top mem 3} ${top io_perc 3}
+${color lightgrey}${top name 4}    ${top cpu 4} ${top mem 4} ${top io_perc 4}
+${color lightgrey}${top name 5}    ${top cpu 5} ${top mem 5} ${top io_perc 5}
+${color lightgrey}${top name 6}    ${top cpu 6} ${top mem 6} ${top io_perc 6}
+${color lightgrey}${top name 7}    ${top cpu 7} ${top mem 7} ${top io_perc 7}
+${color lightgrey}${top name 8}    ${top cpu 8} ${top mem 8} ${top io_perc 8}
+${color lightgrey}${top name 9}    ${top cpu 9} ${top mem 9} ${top io_perc 9}
+${color lightgrey}${top name 10}    ${top cpu 10} ${top mem 10} ${top io_perc 10}
+
+]]

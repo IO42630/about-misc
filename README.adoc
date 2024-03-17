@@ -1,0 +1,11 @@
+= About 👕
+:toc:
+
+* All the topics that don't have their own _about-_ yet.
+
+
+
+
+== Checks
+* no pwd /env -> [ok]
+* no pdf / zip -> [ok]

@@ -1,0 +1,5 @@
+= Way of Work
+
+* before changing a system,
+** start/pass tests
+** then modify & repeat
